@@ -1,7 +1,9 @@
 # Secret image analysis 🕵️‍♂️🔍🖼️
 Python image analysis &amp; transformation of a CSV-encoded grayscale image 
 
-## 🎯 Mission: Decode and transform a hidden grayscale image stored as a CSV file:
+## 🎯 Mission: Decode & transform a hidden grayscale image stored as .csv
+
+## 📋 Project Phases  :
 
 - Phase 1: Load, visualize, and apply colormaps (viridis, hot, etc.).
 
