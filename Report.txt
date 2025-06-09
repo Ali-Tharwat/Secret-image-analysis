@@ -1,0 +1,44 @@
+Colab Link : https://colab.research.google.com/drive/1fdsTUgnzHuearppLF5L3GQxN4wqrPT9O#scrollTo=y-rCVlnJEQ5K
+
+Introduction:
+In this project, I explored a step-by-step image processing pipeline using a hidden image stored in a CSV file. The goal was to reveal, analyze, modify, and denoise the image while documenting each phase in detail. The workflow comprised five key phases: loading and visualizing the data, detecting and analyzing patterns, modifying the image to emphasize features, applying a noise reduction filter, and summarizing findings.
+
+Phase 1: Loading and Revealing the Image
+
+I began by importing essential libraries: NumPy for numerical operations and Matplotlib for visualization. The pixel values were loaded from secret_image.csv into a 2D array. First, I displayed the raw grayscale image to understand its basic structure. Then, I applied three different colormaps—hot, cool, and viridis—to highlight variations in intensity. Each visualization was saved as a PNG file for later reference.
+
+Phase 2: Pattern Detection and Analysis
+
+To detect prominent features, I created a binary mask of the darkest pixels (minimum value) which likely corresponded to black elements in the image. I counted these black pixels and extracted their coordinates. By computing the minimum and maximum row and column indices, I defined a bounding box around the detected pattern. Overlaying the black-pixel coordinates on the grayscale image revealed two clusters near the top (the "eyes") and a curved line near the bottom (the "mouth"). A brief visual inspection suggested a simple smiling face pattern.
+
+Phase 3: Modifying the Image
+
+I converted the normalized grayscale data to 8-bit format and then to an RGB image. Using SciPy’s ndimage, I labeled each connected component of black pixels and computed their centroids. The two topmost clusters were identified as eyes and recolored in red. I then added a solid blue border of four pixels around the image to frame the face.
+
+Next, I transformed the smile into a frown: I collected the original mouth coordinates, calculated their new flipped positions, and swapped pixel values, clearing the old mouth pixels afterward. The final result—a sad face with a blue border—was saved and displayed.
+
+Phase 4: Noise Reduction Filter
+
+To smooth out any artifacts introduced during modification, I applied a simple mean (blur) filter with a kernel size of 2×1. Both the original modified image and the denoised version were saved. Displaying them side by side confirmed that the filter reduced noise without significantly blurring the key facial features.
+
+Phase 5: Summary of Results and Answers
+
+Number of black pixels: 9
+
+Coordinates of black pixels: (5,5), (5,14), (13,6), (13,12), (14,7), (14,8), (14,9), (14,10), (14,11)
+
+Bounding box: Rows 5–14, Columns 5–14
+
+Detected features:
+
+Two pixels (now rendered in red) for the eyes at row 5
+
+Two pixels forming the original smile curve at row 13
+
+Five pixels forming the mouth, repositioned to create a frown at row 12
+
+A decorative blue border surrounding the entire image
+
+Conclusion:
+This project demonstrated fundamental image processing techniques: reading and visualizing data, binary masking and pattern detection, component labeling and pixel manipulation, and basic noise reduction. By following a clear sequence of phases, I successfully transformed a hidden grayscale image into a stylized RGB representation, highlighting both analytic and creative aspects of computer vision.
+
