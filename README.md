@@ -22,13 +22,13 @@ Python image analysis &amp; transformation of a CSV-encoded grayscale image
     <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python ">
   </a>
   <a href="https://numpy.org/" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy" alt="NumPy">
   </a>
   <a href="https://matplotlib.org/" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="Matplotlib">
+    <img src="https://custom-icon-badges.demolab.com/badge/Matplotlib-71D291?style=for-the-badge&logo=Matplotlib"alt="Matplotlib">
   </a>
   <a href="https://opencv.org/" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=OpenCV&logoColor=white" alt="OpenCV">
+    <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=OpenCV" alt="OpenCV">
   </a>
   <a href="https://scipy.org/" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/SciPy-654FF0?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy">
